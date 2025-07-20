@@ -14,5 +14,25 @@
 
 // Buon  divertimento e confermate lettura come al solito 
 
+// Selezionare gli elementi
+const button = document.getElementById("toggleBtn")
+const lampadina = document.getElementById("lampadina")
 
+//Lo stato iniziale deve essere spenta la lampadina
+let accesa = false
 
+// gestiamo il click
+button.addEventListener('click', function () {
+      accesa = !accesa;
+      // se è accesa la spegniamo e cambia anche il nome dentro il bottone
+      if (accesa) {
+            lampadina.src = './yellow_lamp.png';
+            button.textContent = 'Spegni'
+      }
+      // se è spenta cambiando il nome sul bottone e la accendiamo
+      else {
+            lampadina.src = './white_lamp.png';
+            button.textContent = 'Accendi';
+      }
+
+});
